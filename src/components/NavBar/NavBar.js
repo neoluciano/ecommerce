@@ -12,9 +12,20 @@ function NavBar (){
             </a>
             
             <div className="navbar-menu">
-                <a className="navbar-item">Motorola</a>
-                <a className="navbar-item">Apple</a>
-                <a className="navbar-item">Samsung</a>
+                <div className="columns">
+                    <div className="column">
+                        <a className="navbar-item">Motorola</a>
+                    </div>
+                    <div className="column">
+                        <a className="navbar-item">Apple</a>
+                    </div>
+                    <div className="column">
+                        <a className="navbar-item">Samsung</a>
+                    </div>
+                </div>
+                
+                
+                
                 
             </div>
             <CartWidget/>
