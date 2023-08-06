@@ -1,5 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
 import logoEcommerce from "./assets/logoEcommerce.png";
+import "./style.css";
 
 function NavBar (){
     return (
