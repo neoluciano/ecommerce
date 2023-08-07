@@ -81,6 +81,17 @@ const lista_productos = [
             //console.log("Cantidad de productos devueltos en el asyncMock:", cantidad);
             resolve(lista_productos);
 
-                },0)
+                },500)
         }  )
+   }
+
+   export const getProductById = (idProduct)=>{
+
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(lista_productos.find( prod => prod.id === idProduct))
+        }, 500);
+        
+    })
+
    }
