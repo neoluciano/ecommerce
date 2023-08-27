@@ -6,11 +6,16 @@ export const CartContext = createContext({
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState ([]);
+    const [totalQuantity, setTotalQuantity] = useState(0);
+    const [totalAmountInCart, setTotalAmountInCart] = useState(0);
     console.log(cart)
 
     const addItem = (item, quantity)=>{
         if(!isInCart(item.id)) {
-            setCart(prev => [...prev, {...item, quantity}])
+            setCart(prev => [...prev, {...item, quantity}]);
+            console.log('Items del cart: ' + quantity);
+            setTotalQuantity(totalQuantity + quantity);
+            setTotalAmountInCart(totalAmountInCart + (item.price * quantity));
         }
         else {
             console.error('El producto ya existe en el carrito. No se puede volver a agregar')
@@ -24,18 +29,18 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = ()=>{
         setCart([]);
+        setTotalQuantity(0);
+        setTotalAmountInCart(0);
     }
 
     const isInCart = (itemId)=>{
         return cart.some(prod => prod.id === itemId)
     }
-
-    const total = 666;
-
-    const totalQuantity = 5;
+   
+    
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clearCart, total, totalQuantity}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clearCart, totalAmountInCart, totalQuantity}}>
             {children}
         </CartContext.Provider>
     )

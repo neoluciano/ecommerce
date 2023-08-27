@@ -8,7 +8,7 @@ import CartItem from '../CartItem/CartItem';
 
 function Cart () {
 
-    const {cart, clearCart, totalQuantity, total} = useContext(CartContext);
+    const {cart, clearCart, totalQuantity, totalAmountInCart} = useContext(CartContext);
     console.log('TotalQuantity: ' + totalQuantity)
     if(totalQuantity===0){
         return (
@@ -23,7 +23,7 @@ function Cart () {
 
         <div>
             {cart.map(p => <CartItem key={p.id} {...p}/>)}
-            <h3>Total: $ {total}</h3>
+            <h3>Total: $ {totalAmountInCart}</h3>
             <button onClick={()=>clearCart()} className="Button">Limpiar Carrito</button>
             <Link to='/checkout' className='Option'>CheckOut</Link>
         </div>

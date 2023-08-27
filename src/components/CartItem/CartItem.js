@@ -1,10 +1,14 @@
 
 
-function CartItem () {
-
+function CartItem ({id, title, price, quantity}) {
+    
     return(
-        <div>
-            Aca deberia estar renderizando el item del carrito
+        
+        <div className="cartItem">
+            <p>Producto: {title}</p>
+            <p>Cantidad: {quantity}</p>
+            <p>Precio unitario: ${price}</p>
+            <p>Subtotal: ${price * quantity}</p>
         </div>
 
 
