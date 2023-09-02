@@ -1,0 +1,6 @@
+.CartWidget{
+  color: white;
+  text-decoration: none;
+  width: 25px;
+  transition: color 0.3s;
+}

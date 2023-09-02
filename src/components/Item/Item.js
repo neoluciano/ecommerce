@@ -11,7 +11,9 @@ function Item ({id, title, image, price, stock }){
         <article className="CardItem">
             <header className="CardItemHeader">
                 <h2 className="ItemHeader">
+                    <strong>
                     {title}
+                    </strong>
                 </h2>
             </header>
             <picture className="Imagen">
@@ -26,7 +28,7 @@ function Item ({id, title, image, price, stock }){
                 </p>
             </section>
             <footer className="CardItemFooter">
-                <Link to={`/item/${id}`} className="Option">Ver detalle</Link>
+                <Link to={`/item/${id}`} className="OptionDetail">Ver detalle</Link>
             </footer>
         </article>
     )

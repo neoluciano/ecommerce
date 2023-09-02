@@ -1,3 +1,18 @@
+# Proyecto NEO Ecommerce - Proyecto Final 
+
+Este proyecto esta desarrollado integramente con React JS Nativo, para aplicar los conocimiento adquiridos en un curso de react
+en CoderHouse.
+Se trata de una aplicacion / ecommerce que cuenta con los siguientes features:
+    Pagina de catalogo de productos
+    Catalogo de productos por categoria
+    Pagina de detalle del producto
+    Carrito
+    CheckOut
+    Confirmacion de la compra
+
+Se utilizo como base de datos FireStore de FireBase
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

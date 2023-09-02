@@ -22,9 +22,11 @@ export const CartProvider = ({ children }) => {
         }
     }
 
-    const removeItem = (itemId)=>{
+    const removeItem = (itemId, quantity, subTotal)=>{
         const cartUpdated = cart.filter(prod => prod.id !== itemId)
         setCart(cartUpdated);
+        setTotalQuantity(totalQuantity - quantity);
+        setTotalAmountInCart(totalAmountInCart - subTotal);
     }
 
     const clearCart = ()=>{
@@ -36,7 +38,6 @@ export const CartProvider = ({ children }) => {
     const isInCart = (itemId)=>{
         return cart.some(prod => prod.id === itemId)
     }
-   
     
 
     return (

@@ -2,6 +2,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from '../../context/CartContext';
+import "./ItemDetail.css"
 
 function ItemDetail ({id, title, image, category, description, price, stock}) {
 
@@ -13,7 +14,7 @@ function ItemDetail ({id, title, image, category, description, price, stock}) {
         console.log("Cantidad agregada de items ", quantity)
 
         const item = {
-            id, title, price
+            id, title, price, image
         }
 
         addItem(item, quantity);
@@ -21,34 +22,53 @@ function ItemDetail ({id, title, image, category, description, price, stock}) {
     }
  
     return (
-        <article className="CardItem">
+        <article className="CardItem2">
             <header className="Header">
                 <h2 className="ItemHeader">
-                    {title}
+                    <b>{title}</b>
                 </h2>
             </header>
-            <picture>
-                <img src={image} alt={title} className="ItemImg"/>
-            </picture>
-            <section>
-                <p className="Info">
-                    Categoria: {category}
-                </p>
-                <p className="Info">
-                    Descricion: {description}
-                </p>
-                <p className="Info">
-                    Precio: ${price}
-                </p>
-            </section>
-            <footer className="ItemFooter">
-                {
-                    quantityAdded > 0 ? (<Link to='/cart' className='Option'>Terminar compra</Link>)
-                    :(<ItemCount initial={1} stock={stock} onAdd={ handleOnAdd }/>)
-                }
+            <div className="ItemDetailColumns">
+                <div className="ItemDetailColumn1">            
+                <picture>
+                    <img src={image} alt={title} className="ItemImgDetail"/>
+                </picture>
+                <section>
+                    
+                    <p className="InfoDescription">
+                        <b>Descricion:</b> {description}
+                    </p>
+                    
+                </section>
+                </div> 
+                <div className="ItemDetailColumn2">
+                    <div>
+                    <section>
+                    <p className="InfoPrice">
+                        Precio: ${price}
+                    </p>
+                    <p className="Info">
+                        <b>Categoria:</b> {category}
+                    </p>
+                    
+                    </section>
+                    </div>
+                    <div>
+                    <footer className="ItemFooterDetail">
+                        {
+                            quantityAdded > 0 ? (<Link to='/cart' className='buyButton'>Terminar compra</Link>)
+                            :(<ItemCount initial={1} stock={stock} onAdd={ handleOnAdd }/>)
+                        }
+                        <Link to='/' className="secondaryButton">Volver</Link>
+                        
+                    </footer>
+                    </div>
+                    
+                </div>    
 
-                
-            </footer>
+            </div>
+                   
+            
         </article>
 
     )

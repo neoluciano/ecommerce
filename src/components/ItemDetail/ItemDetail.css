@@ -1,0 +1,115 @@
+
+.CardItem2 {
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+  }
+  
+  .Header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .ItemHeader {
+    font-size: 24px;
+  }
+  
+  .ItemImgDetail {
+    max-width: 40%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .Info {
+    margin-bottom: 10px;
+    
+  }
+
+  .InfoDescription{
+    max-width: 90%;
+    
+  }
+
+  .InfoPrice{
+    padding-top: 10px;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .ItemFooterDetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    
+  }
+  
+  .ItemDetailColumn1{
+    max-width: 65%;
+  }
+
+  .ItemDetailColumn2{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+  }
+
+  
+
+  .ItemDetailColumns{
+    display: flex;
+    flex-direction: row;
+    
+    
+
+  }
+  .option2{
+    color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+  }
+
+  .secondaryButton{
+    background-color: white; 
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .Option2:hover {
+    color: #1565c0; 
+  }
+
+  .buyButton {
+    background-color: #1976d2;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .buyButton:hover {
+    background-color: #1565c0;
+  }
+  
+
+  @media (max-width: 768px) {
+    .CardItem {
+      margin: 10px;
+    }
+  }
+  

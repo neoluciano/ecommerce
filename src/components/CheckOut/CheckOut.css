@@ -1,0 +1,19 @@
+
+.CheckOutContainer {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    
+  }
+  
+  .CheckOutContainer h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1976d2; 
+  }
+  
+  
